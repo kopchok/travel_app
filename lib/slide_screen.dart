@@ -67,7 +67,10 @@ class SlideScreen extends StatelessWidget {
               quarterTurns: 3,
               child: SliderButton(
                 action: () async {
-                  Get.offAll(const HomeScreen());
+                  Get.offAll(
+                    const HomeScreen(),
+                    transition: Transition.downToUp,
+                  );
                   return true;
                 },
                 width: 150,
